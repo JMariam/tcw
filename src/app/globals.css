@@ -36,40 +36,36 @@ body {
   min-height: 100%;
   overflow-x: hidden;
  }
-.marquee {
-  white-space: nowrap;
-  overflow-x: hidden;
-  animation: marquee 5s linear infinite;
-  
-}
-/* .marquee img {
-  display: inline-block;
+
+/* .clippy{
+  clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 63% 90%, 50% 75%, 0% 75%);
 } */
 
-@keyframes marquee {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
+.dialog_box:after, .dialog_box:before {
+	border: solid transparent;
+	content: "";
+	height: 0;
+	width: 0;
+	position: absolute;
 }
-.marque {
-  white-space: nowrap;
-  overflow-x: hidden;
-  animation: marque 5s linear infinite;
+.dialog_box:after {
+  border-width: 23px;
 }
-/* .marque img {
-  display: inline-block;
-} */
-
-@keyframes marque {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(100%);
-  }
+.dialog_box:before {
+  border-width: 25px;
+}
+/*Arrow pointing BOTTOM*/
+.dialog_box.bottom:after, .dialog_box.bottom:before {
+	left: 20%;
+	top: 100%;
+}
+.dialog_box.bottom:after {
+  border-color:  #191A23 transparent transparent transparent ;
+  margin-left: -23px;
+}
+.dialog_box.bottom:before {
+  border-color:  #B9FF66 transparent transparent transparent ;
+  margin-left: -25px;
 }
 @media (max-width: 600px) {
   .marque {

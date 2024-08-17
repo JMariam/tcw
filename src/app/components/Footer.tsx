@@ -6,7 +6,7 @@ import { FaTwitter } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <div className="bg-positivus-dark lg:w-[90%] mx-auto px-14 py-10 lg:rounded-t-[1.5rem] mb-0 text-white">
+    <div className="overflow-hidden bg-positivus-dark lg:w-[90%] mx-auto px-14 py-10 lg:rounded-t-[1.5rem] mb-0 text-white">
       <div className="flex flex-col lg:flex-row space-y-6 lg:space-y-0 lg:justify-between items-center">
         <div className="flex space-x-1 items-center">
           <PiStarFourFill className="text-[32px] rotate-45" />
@@ -69,7 +69,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="mt-10 pt-10 border-t border-white flex space-x-6">
-        <p className="text-white font-[300] text-14px]">
+        <p className="text-white font-[300] text-14px] lg:w-full w-[80%]">
           © 2023 Positivus. All Rights Reserved.
         </p>
         <Link href="/">

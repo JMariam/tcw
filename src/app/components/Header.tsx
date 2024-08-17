@@ -2,7 +2,7 @@ import { PiStarFourFill } from 'react-icons/pi';
 
 export default function Header() {
   return (
-    <div className="w-[90%] mx-auto p-6">
+    <div className="w-[90%] mx-auto py-6 lg:px-6">
       <div className="flex justify-between items-center">
         <div className="flex space-x-1 items-center">
         <PiStarFourFill className='text-[40px] rotate-45'/>

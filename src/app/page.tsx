@@ -7,12 +7,44 @@ import Case from "./components/Case";
 import Accordion from "./components/Accordion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import "swiper/css/free-mode";
+import { FreeMode } from "swiper/modules";
 import Team from "./components/Team";
 import Link from "next/link";
 import Footer from "./components/Footer";
 import Contact from "./components/Contact";
+import Testimonials from "./components/Testimonials";
+import { motion } from "framer-motion";
 
 export default function Home() {
+  const marqueeVariants = {
+    animate: {
+      x: ["100%", "-100%"],
+      transition: {
+        x: {
+          repeat: Infinity,
+          repeatType: "loop",
+          duration: 5,
+          ease: "linear",
+        },
+      },
+    },
+  };
+
+  const marqueVariants = {
+    animate: {
+      x: ["-100%", "100%"],
+      transition: {
+        x: {
+          repeat: Infinity,
+          repeatType: "loop",
+          duration: 5,
+          ease: "linear",
+        },
+      },
+    },
+  };
+
   const accordionItems = [
     {
       title: "Consultation",
@@ -81,9 +113,12 @@ export default function Home() {
               online through a range of services including SEO, PPC, social
               media marketing, and content creation.
             </p>
-            <p className="rounded-2xl font-[300] bg-positivus-dark w-fit text-white py-5 px-8 text-[20px]">
+            <Link
+              href="/"
+              className="rounded-2xl font-[300] bg-positivus-dark w-fit text-white py-5 px-8 text-[20px]"
+            >
               Book a consultation
-            </p>
+            </Link>
           </div>
         </div>
         <img src="Ill1.png" alt="" className="lg:w-[50%]" />
@@ -99,25 +134,37 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="hidden mb-14 marquee lg:flex justify-between grayscale">
+      <motion.div
+        className="hidden mb-14 marquee lg:flex justify-between grayscale"
+        variants={marqueVariants}
+        animate="animate"
+      >
         <img src="/Company logo.svg" alt="" />
         <img src="/Company logo (1).svg" alt="" />
         <img src="/Company logo (5).svg" alt="" />
         <img src="/Company logo (4).svg" alt="" />
         <img src="/Company logo (2).svg" alt="" />
         <img src="/Company logo (3).svg" alt="" />
-      </div>
+      </motion.div>
       <div className="my-10 grayscale">
-        <div className="lg:hidden marque flex justify-between mb-2">
+        <motion.div
+          className="lg:hidden flex justify-between mb-2"
+          variants={marqueeVariants}
+          animate="animate"
+        >
           <img src="/Company logo.svg" alt="" className="w-28" />
           <img src="/Company logo (1).svg" alt="" className="w-28" />
           <img src="/Company logo (5).svg" alt="" className="w-28" />
-        </div>
-        <div className="lg:hidden marquee  flex justify-between">
+        </motion.div>
+        <motion.div
+          className="lg:hidden flex justify-between"
+          variants={marqueVariants}
+          animate="animate"
+        >
           <img src="/Company logo (4).svg" alt="" className="w-28" />
           <img src="/Company logo (2).svg" alt="" className="w-28" />
           <img src="/Company logo (3).svg" alt="" className="w-28" />
-        </div>
+        </motion.div>
       </div>
 
       <Services />
@@ -241,12 +288,48 @@ export default function Home() {
             about Our Digital Marketing Services
           </p>
         </div>
-        <div className="bg-positivus-dark rounded-[2rem]">
-          dialoggg
+        <div className="bg-positivus-dark p-10 rounded-[2rem]">
+          <Swiper
+            spaceBetween={30}
+            slidesPerView={1}
+            freeMode={true}
+            modules={[FreeMode]}
+            breakpoints={{
+              // when window width is >= 640px
+              640: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
+              // when window width is >= 768px
+              768: {
+                slidesPerView: 2.5,
+                spaceBetween: 30,
+              },
+            }}
+          >
+            <SwiperSlide>
+              <Testimonials text="We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. The team is professional, responsive, and truly cares about the success of our business. We highly recommend Positivus to any company looking to grow their online presence." />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Testimonials text="We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. The team is professional, responsive, and truly cares about the success of our business. We highly recommend Positivus to any company looking to grow their online presence." />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Testimonials text="We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. The team is professional, responsive, and truly cares about the success of our business. We highly recommend Positivus to any company looking to grow their online presence." />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Testimonials text="We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. The team is professional, responsive, and truly cares about the success of our business. We highly recommend Positivus to any company looking to grow their online presence." />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Testimonials text="We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. The team is professional, responsive, and truly cares about the success of our business. We highly recommend Positivus to any company looking to grow their online presence." />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Testimonials text="We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. The team is professional, responsive, and truly cares about the success of our business. We highly recommend Positivus to any company looking to grow their online presence." />
+            </SwiperSlide>
+          </Swiper>
         </div>
       </div>
-      <Contact/>
-      <Footer/>
+      <Contact />
+      <Footer />
     </div>
   );
 }
