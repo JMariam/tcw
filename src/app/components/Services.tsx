@@ -156,7 +156,7 @@ export default function Services() {
 
       <div className="bg-positivus-grey rounded-[3rem] lg:h-[347px] flex items-center justify-between ">
         <div className="flex flex-col space-y-8 p-12 ">
-          <p className="font-[500] text-[26px] lg:text-[30px]">Let's make things happen</p>
+          <p className="font-[500] text-[26px] lg:text-[30px]">Let&#39;s make things happen</p>
           <p className="leading[20px] lg:leading-[23px] text-[16px] lg:text-[18px] font-[400] lg:w-[70%]">
             Contact us today to learn more about how our digital marketing
             services can help your business grow and succeed online.

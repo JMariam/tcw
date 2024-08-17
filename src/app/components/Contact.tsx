@@ -6,11 +6,12 @@ export default function Contact() {
           Contact Us
         </p>
         <p className="text-[16px] text-center lg:text-start lg:text-[18px] leading-[22px] font-[500] w-[105%] lg:w-[50%]">
-          Connect with Us: Let's Discuss Your Digital Marketing Needs
+          Connect with Us: Let&#39;s Discuss Your Digital Marketing Needs
         </p>
       </div>
       <div className="bg-positivus-grey rounded-[2rem] flex justify-between py-8">
-        <div className="w-[50%] pl-8">
+        <div className="pl-8">
+          <option value=""></option>
           <p className="text-4xl">here yeah he</p>
         </div>
         <div className="hidden lg:block w-[50%] relative left-[16rem]">
