@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -29,5 +29,57 @@ body {
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+} */
+ body{
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+ }
+.marquee {
+  white-space: nowrap;
+  overflow-x: hidden;
+  animation: marquee 5s linear infinite;
+  
+}
+/* .marquee img {
+  display: inline-block;
+} */
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.marque {
+  white-space: nowrap;
+  overflow-x: hidden;
+  animation: marque 5s linear infinite;
+}
+/* .marque img {
+  display: inline-block;
+} */
+
+@keyframes marque {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+@media (max-width: 600px) {
+  .marque {
+    width: 100%;
+    overflow-x: hidden; 
+    
+  }
+  .marquee {
+    width: 100%;
+    overflow-x: hidden; 
+    
   }
 }
