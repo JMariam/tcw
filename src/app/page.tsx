@@ -133,38 +133,63 @@ export default function Home() {
           </p>
         </div>
       </div>
-
-      <motion.div
-        className="hidden mb-14 marquee lg:flex justify-between grayscale"
-        variants={marqueVariants}
-        animate="animate"
-      >
-        <img src="/Company logo.svg" alt="" />
-        <img src="/Company logo (1).svg" alt="" />
-        <img src="/Company logo (5).svg" alt="" />
-        <img src="/Company logo (4).svg" alt="" />
-        <img src="/Company logo (2).svg" alt="" />
-        <img src="/Company logo (3).svg" alt="" />
-      </motion.div>
-      <div className="my-10 grayscale">
+      <div className="overflow-hidden whitespace-nowrap">
         <motion.div
-          className="lg:hidden flex justify-between mb-2"
-          variants={marqueeVariants}
-          animate="animate"
-        >
-          <img src="/Company logo.svg" alt="" className="w-28" />
-          <img src="/Company logo (1).svg" alt="" className="w-28" />
-          <img src="/Company logo (5).svg" alt="" className="w-28" />
-        </motion.div>
-        <motion.div
-          className="lg:hidden flex justify-between"
+          className="hidden mb-14 marquee lg:flex justify-between grayscale"
           variants={marqueVariants}
           animate="animate"
         >
-          <img src="/Company logo (4).svg" alt="" className="w-28" />
-          <img src="/Company logo (2).svg" alt="" className="w-28" />
-          <img src="/Company logo (3).svg" alt="" className="w-28" />
+          <img src="/Company logo.svg" alt="" />
+          <img src="/Company logo (1).svg" alt="" />
+          <img src="/Company logo (5).svg" alt="" />
+          <img src="/Company logo (4).svg" alt="" />
+          <img src="/Company logo (2).svg" alt="" />
+          <img src="/Company logo (3).svg" alt="" />
         </motion.div>
+      </div>
+      <div className="my-10 grayscale">
+        <div className="relative overflow-hidden">
+          <motion.div
+            className="lg:hidden flex justify-between mb-2"
+            variants={marqueeVariants}
+            animate="animate"
+          >
+            <img src="/Company logo.svg" alt="" className="w-28 inline-block" />
+            <img
+              src="/Company logo (1).svg"
+              alt=""
+              className="w-28 inline-block whitespace-nowrap"
+            />
+            <img
+              src="/Company logo (5).svg"
+              alt=""
+              className="w-28 inline-block whitespace-nowrap"
+            />
+          </motion.div>
+        </div>
+        <div className="relative overflow-hidden whitespace-nowrap">
+          <motion.div
+            className="lg:hidden flex justify-between"
+            variants={marqueVariants}
+            animate="animate"
+          >
+            <img
+              src="/Company logo (4).svg"
+              alt=""
+              className="w-28 inline-block whitespace-nowrap"
+            />
+            <img
+              src="/Company logo (2).svg"
+              alt=""
+              className="w-28 inline-block whitespace-nowrap"
+            />
+            <img
+              src="/Company logo (3).svg"
+              alt=""
+              className="w-28 inline-block whitespace-nowrap"
+            />
+          </motion.div>
+        </div>
       </div>
 
       <Services />

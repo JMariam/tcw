@@ -6,7 +6,7 @@ import { FaTwitter } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <div className="overflow-hidden bg-positivus-dark lg:w-[90%] mx-auto px-14 py-10 lg:rounded-t-[1.5rem] mb-0 text-white">
+    <div className="overflow-hidden bg-positivus-dark lg:w-[90%] w-full mx-auto px-14 py-10 lg:rounded-t-[1.5rem] mb-0 text-white">
       <div className="flex flex-col lg:flex-row space-y-6 lg:space-y-0 lg:justify-between items-center">
         <div className="flex space-x-1 items-center">
           <PiStarFourFill className="text-[32px] rotate-45" />
