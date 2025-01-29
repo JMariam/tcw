@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
@@ -33,7 +34,7 @@ export default function Home() {
 
   const marqueVariants = {
     animate: {
-      x: ["-100%", "100%"],
+      x: ["0", "-500%"],
       transition: {
         x: {
           repeat: Infinity,
@@ -135,7 +136,7 @@ export default function Home() {
       </div>
       <div className="overflow-hidden whitespace-nowrap">
         <motion.div
-          className="hidden mb-14 marquee lg:flex justify-between grayscale"
+          className="hidden mb-14 marquee lg:flex space-x-40 grayscale w-max"
           variants={marqueVariants}
           animate="animate"
         >
@@ -145,6 +146,13 @@ export default function Home() {
           <img src="/Company logo (4).svg" alt="" />
           <img src="/Company logo (2).svg" alt="" />
           <img src="/Company logo (3).svg" alt="" />
+          <img src="/Company logo.svg" alt="" />
+          <img src="/Company logo (1).svg" alt="" />
+          <img src="/Company logo (5).svg" alt="" />
+          <img src="/Company logo (4).svg" alt="" />
+          <img src="/Company logo (2).svg" alt="" />
+          <img src="/Company logo (3).svg" alt="" />
+     
         </motion.div>
       </div>
       <div className="my-10 grayscale">
