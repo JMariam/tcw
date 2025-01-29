@@ -20,7 +20,7 @@ import { motion } from "framer-motion";
 export default function Home() {
   const marqueeVariants = {
     animate: {
-      x: ["100%", "-100%"],
+      x: ["0", "-100%"],
       transition: {
         x: {
           repeat: Infinity,
@@ -34,7 +34,7 @@ export default function Home() {
 
   const marqueVariants = {
     animate: {
-      x: ["0", "-500%"],
+      x: ["0%", "-100%"],
       transition: {
         x: {
           repeat: Infinity,
@@ -140,19 +140,16 @@ export default function Home() {
           variants={marqueVariants}
           animate="animate"
         >
-          <img src="/Company logo.svg" alt="" />
-          <img src="/Company logo (1).svg" alt="" />
-          <img src="/Company logo (5).svg" alt="" />
-          <img src="/Company logo (4).svg" alt="" />
-          <img src="/Company logo (2).svg" alt="" />
-          <img src="/Company logo (3).svg" alt="" />
-          <img src="/Company logo.svg" alt="" />
-          <img src="/Company logo (1).svg" alt="" />
-          <img src="/Company logo (5).svg" alt="" />
-          <img src="/Company logo (4).svg" alt="" />
-          <img src="/Company logo (2).svg" alt="" />
-          <img src="/Company logo (3).svg" alt="" />
-     
+          {[...Array(2)].map((_, index) => (
+            <div key={index} className="">
+              <img src="/Company logo.svg" alt="" />
+              <img src="/Company logo (1).svg" alt="" />
+              <img src="/Company logo (5).svg" alt="" />
+              <img src="/Company logo (4).svg" alt="" />
+              <img src="/Company logo (2).svg" alt="" />
+              <img src="/Company logo (3).svg" alt="" />
+            </div>
+          ))}
         </motion.div>
       </div>
       <div className="my-10 grayscale">
