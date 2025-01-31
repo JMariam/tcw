@@ -34,7 +34,7 @@ export default function Home() {
 
   const marqueVariants = {
     animate: {
-      x: ["0%", "100%"],
+      x: ["0%", "-100%"],
       transition: {
         x: {
           repeat: Infinity,
