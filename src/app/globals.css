@@ -94,7 +94,6 @@ body {
 }
 
 @media (max-width: 1024px) {
-
   .marque-container {
     --gap: 10rem;
     gap: var(--gap);
@@ -103,7 +102,7 @@ body {
     gap: var(--gap);
     animation: scrol 5s linear infinite reverse;
   }
-  .marque-container:hover .marque{
+  .marque-container:hover .marque {
     animation-play-state: paused;
   }
   @keyframes scrol {
@@ -118,6 +117,15 @@ body {
   }
   .marque-container {
     --gap: 4rem;
-    
+  }
+  @keyframes scroll {
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+  @keyframes scrol {
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
   }
 }
