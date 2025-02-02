@@ -20,7 +20,7 @@ import { motion } from "framer-motion";
 export default function Home() {
   const marqueeVariants = {
     animate: {
-      x: ["0", "-100%"],
+      x: ["100%", "-100%"],
       transition: {
         x: {
           repeat: Infinity,
@@ -32,19 +32,19 @@ export default function Home() {
     },
   };
 
-  const marqueVariants = {
-    animate: {
-      x: ["0%", "-100%"],
-      transition: {
-        x: {
-          repeat: Infinity,
-          repeatType: "loop",
-          duration: 5,
-          ease: "linear",
-        },
-      },
-    },
-  };
+  // const marqueVariants = {
+  //   animate: {
+  //     x: ["-100%", "100%"],
+  //     transition: {
+  //       x: {
+  //         repeat: Infinity,
+  //         repeatType: "loop",
+  //         duration: 5,
+  //         ease: "linear",
+  //       },
+  //     },
+  //   },
+  // };
 
   const accordionItems = [
     {
@@ -103,7 +103,7 @@ export default function Home() {
       <Header />
 
       {/* Hero */}
-      <div className="w-[90%] mx-auto lg:space-y-0 space-y-5 lg:p-6 mt-5 lg:mt-8 flex flex-col lg:flex-row">
+      <div className="w-[90%] mx-auto lg:space-y-0 space-y-5 lg:p-6 mt-0 lg:mt-8 flex flex-col lg:flex-row">
         <div className="lg:w-[50%]">
           <p className="text-[41px] lg:text-[60px] font-[500] leading-[54px]">
             Navigating the digital landscape for success
@@ -134,11 +134,18 @@ export default function Home() {
           </p>
         </div>
       </div>
-      <div className="overflow-hidden whitespace-nowrap">
-        <motion.div
-          className="hidden mb-14 marquee lg:flex space-x-40 grayscale w-max"
-          variants={marqueVariants}
-          animate="animate"
+      <div className="marquee-container hidden lg:flex overflow-hidden select-none">
+        <div className="flex justify-between marquee grayscale flex-shrink-0 min-w-[100%]">
+          <img src="/Company logo.svg" alt="" />
+          <img src="/Company logo (1).svg" alt="" />
+          <img src="/Company logo (5).svg" alt="" />
+          <img src="/Company logo (4).svg" alt="" />
+          <img src="/Company logo (2).svg" alt="" />
+          <img src="/Company logo (3).svg" alt="" />
+        </div>
+        <div
+          aria-hidden="true"
+          className="flex justify-between marquee grayscale flex-shrink-0 min-w-[100%]"
         >
           <img src="/Company logo.svg" alt="" />
           <img src="/Company logo (1).svg" alt="" />
@@ -146,50 +153,50 @@ export default function Home() {
           <img src="/Company logo (4).svg" alt="" />
           <img src="/Company logo (2).svg" alt="" />
           <img src="/Company logo (3).svg" alt="" />
-        </motion.div>
+        </div>
       </div>
       <div className="my-10 grayscale">
-        <div className="relative overflow-hidden">
-          <motion.div
-            className="lg:hidden flex justify-between mb-2"
-            variants={marqueeVariants}
-            animate="animate"
+        <div className="marquee-container flex lg:hidden overflow-hidden select-none mb-3">
+          <div className="flex justify-between marquee flex-shrink-0 min-w-[100%]">
+            <img src="/Company logo.svg" alt="" />
+            <img src="/Company logo (1).svg" alt="" />
+            <img src="/Company logo (5).svg" alt="" />
+            {/* <img src="/Company logo (4).svg" alt="" />
+          <img src="/Company logo (2).svg" alt="" />
+          <img src="/Company logo (3).svg" alt="" /> */}
+          </div>
+          <div
+            aria-hidden="true"
+            className="flex justify-between marquee flex-shrink-0 min-w-[100%]"
           >
-            <img src="/Company logo.svg" alt="" className="w-28 inline-block" />
-            <img
-              src="/Company logo (1).svg"
-              alt=""
-              className="w-28 inline-block whitespace-nowrap"
-            />
-            <img
-              src="/Company logo (5).svg"
-              alt=""
-              className="w-28 inline-block whitespace-nowrap"
-            />
-          </motion.div>
+            <img src="/Company logo.svg" alt="" />
+            <img src="/Company logo (1).svg" alt="" />
+            <img src="/Company logo (5).svg" alt="" />
+            {/* <img src="/Company logo (4).svg" alt="" />
+          <img src="/Company logo (2).svg" alt="" />
+          <img src="/Company logo (3).svg" alt="" /> */}
+          </div>
         </div>
-        <div className="relative overflow-hidden whitespace-nowrap">
-          <motion.div
-            className="lg:hidden flex justify-between"
-            variants={marqueVariants}
-            animate="animate"
+        <div className="marque-container flex lg:hidden overflow-hidden select-none">
+          <div className="flex justify-between marque flex-shrink-0 min-w-[100%]">
+            {/* <img src="/Company logo.svg" alt="" />
+          <img src="/Company logo (1).svg" alt="" />
+          <img src="/Company logo (5).svg" alt="" /> */}
+            <img src="/Company logo (4).svg" alt="" />
+            <img src="/Company logo (2).svg" alt="" />
+            <img src="/Company logo (3).svg" alt="" />
+          </div>
+          <div
+            aria-hidden="true"
+            className="flex justify-between marque flex-shrink-0 min-w-[100%]"
           >
-            <img
-              src="/Company logo (4).svg"
-              alt=""
-              className="w-28 inline-block whitespace-nowrap"
-            />
-            <img
-              src="/Company logo (2).svg"
-              alt=""
-              className="w-28 inline-block whitespace-nowrap"
-            />
-            <img
-              src="/Company logo (3).svg"
-              alt=""
-              className="w-28 inline-block whitespace-nowrap"
-            />
-          </motion.div>
+            {/* <img src="/Company logo.svg" alt="" />
+          <img src="/Company logo (1).svg" alt="" />
+          <img src="/Company logo (5).svg" alt="" /> */}
+            <img src="/Company logo (4).svg" alt="" />
+            <img src="/Company logo (2).svg" alt="" />
+            <img src="/Company logo (3).svg" alt="" />
+          </div>
         </div>
       </div>
 

@@ -69,11 +69,55 @@ body {
   border-color: #b9ff66 transparent transparent transparent;
   margin-left: -25px;
 }
-@media (max-width: 600px) {
-
+/* @media (max-width: 600px) {
   .marquee,
   .marque {
     white-space: nowrap;
     overflow-x: hidden;
+  }
+} */
+.marquee-container {
+  --gap: 10rem;
+  gap: var(--gap);
+}
+.marquee {
+  gap: var(--gap);
+  animation: scroll 5s linear infinite;
+}
+.marquee-container:hover .marquee {
+  animation-play-state: paused;
+}
+@keyframes scroll {
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+@media (max-width: 1024px) {
+
+  .marque-container {
+    --gap: 10rem;
+    gap: var(--gap);
+  }
+  .marque {
+    gap: var(--gap);
+    animation: scrol 5s linear infinite reverse;
+  }
+  .marque-container:hover .marque{
+    animation-play-state: paused;
+  }
+  @keyframes scrol {
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+}
+@media (max-width: 480px) {
+  .marquee-container {
+    --gap: 4rem;
+  }
+  .marque-container {
+    --gap: 4rem;
+    
   }
 }
